@@ -177,12 +177,20 @@
       background: var(--white);
     }
 
-    .register-button {
-      display: block;
-      width: fit-content;
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
 
-      margin: 32px auto 0;
-      padding: 13px 36px;
+      margin-top: 32px;
+    }
+
+    .action-button {
+      display: block;
+      min-width: 130px;
+
+      padding: 13px 30px;
 
       background: var(--accent);
       border: 2px solid var(--accent);
@@ -192,17 +200,23 @@
       font-family: "Old Standard TT", serif;
       font-size: 1.05rem;
       font-weight: 700;
+      text-align: center;
       text-decoration: none;
 
-      transition:
-        background 0.2s ease,
-        color 0.2s ease;
+      transition: background 0.2s ease;
     }
 
-    .register-button:hover {
+    .action-button:hover {
       background: transparent;
     }
 
+    .external-arrow {
+      display: inline-block;
+      margin-left: 5px;
+      font-size: 0.9em;
+      line-height: 1;
+      transform: translateY(-1px);
+    }
 
     /* ========================================
        DECORATIVE DIVIDER
@@ -375,10 +389,15 @@
         margin-bottom: 55px;
       }
 
-      .register-button {
-        margin-top: 26px;
-        padding: 12px 30px;
-      }
+      .action-buttons {
+      margin-top: 26px;
+      gap: 10px;
+    }
+
+    .action-button {
+      min-width: 120px;
+      padding: 12px 24px;
+    }
 
       .section-divider {
         margin-bottom: 45px;
@@ -516,12 +535,25 @@
 
       </div>
 
+      <div class="action-buttons">
+
       <a
         href="#register"
-        class="register-button"
+        class="action-button"
       >
         Register
       </a>
+
+      <a
+        href="https://checkout.square.site/merchant/ML0WTYD59KVDA/checkout/OZWY73H5NOT2E6OHDCBYKW2K"
+        class="action-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Donate <span class="external-arrow" aria-hidden="true">↗</span>
+      </a>
+
+      </div>
 
     </section>
 
